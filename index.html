@@ -33,7 +33,7 @@
         .container {
             text-align: center;
             max-width: 90%;
-            margin: 100px auto; /* Espaciado superior aumentado */
+            margin: 5% auto;
             padding: 20px;
             z-index: 1;
         }
@@ -41,8 +41,8 @@
         .titulo {
             color: #bcfade;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            font-size: 5vw; /* Tamaño ajustado */
-            margin: 20px 0; /* Espaciado reducido */
+            font-size: 5vw;
+            margin: 20px 0;
             animation: fadeInOut 3s infinite;
         }
 
@@ -55,19 +55,17 @@
         }
 
         p {
-            font-size: 2.2vw; /* Tamaño ajustado */
+            font-size: 2.2vw;
             margin: 10px 0;
             color: rgb(242, 137, 248);
-            
             transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-            position: relative;
             display: inline-block;
         }
 
         p:hover {
             transform: translateY(-10px) rotate(2deg);
             color: rgb(251, 253, 122);
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(138, 13, 210, 0.6);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 3, 3, 0.6);
         }
 
         button {
@@ -100,28 +98,26 @@
 
         .album {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 fotos en la primera fila */
-            grid-template-rows: repeat(2, auto); /* 2 filas */
-            gap: 30px; /* Espacio entre las tarjetas */
-            width: 90%; /* Aumenta el ancho del álbum */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px; /* Espacio entre las tarjetas */
+            width: 90%;
             margin: 50px auto;
             justify-items: center; /* Centra las imágenes */
         }
 
         .flip-card {
             background-color: transparent;
-            width: 300px; /* Aumentar el tamaño de las tarjetas */
-            height: 300px; /* Aumentar el tamaño de las tarjetas */
+            width: 250px; /* Ajuste responsivo */
             perspective: 1000px;
-            transition: transform 0.6s;
         }
 
         .flip-card-inner {
             position: relative;
             width: 100%;
-            height: 100%;
+            height: 300px; /* Altura fija */
             text-align: center;
             transform-style: preserve-3d;
+            transition: transform 0.6s;
         }
 
         .flip-card:hover .flip-card-inner {
@@ -144,7 +140,7 @@
 
         .flip-card-front img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -162,7 +158,7 @@
         }
 
         .flip-card-back p {
-            font-size: 1.2rem; /* Aumentar tamaño de fuente del texto */
+            font-size: 1rem; /* Tamaño de fuente ajustado */
             margin: 0;
             padding: 10px;
         }
@@ -185,6 +181,17 @@
             50% { transform: translateY(-10px); }
         }
 
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 6vw;
+            }
+            h2 {
+                font-size: 5vw;
+            }
+            p {
+                font-size: 3vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -194,11 +201,10 @@
         <p>Solo espero que te guste, con mucho amor, Alejandro So Ro.💕💕</p>
         <p>El 21 de septiembre siempre ha sido especial, pero este año es diferente. Este año, mis flores amarillas no solo florecen en la tierra, sino también a través de un código que escribí con dedicación y cariño.</p>
         <p>Decidí crear algo único, algo que reflejara lo que siento por ti, así que puse mi corazón en cada línea de este programa, con la esperanza de que, al recibirlas, sientas lo mismo que yo al pensarlas.</p>
-        <p> Tal vez no alcances a ver todo lo que hay detrás de estas palabras, fotos y efectos, pero por eso me apasiona tanto la programación, y quería compartir contigo este momento que significa tanto para mí. Es una gran lección de vida, porque muchas veces no se percibe el esfuerzo que hay detrás de cada logro, y aún así, tú siempre has sido capaz de ver en mí lo que pocos ven. Aprecio profundamente cómo reconoces todo lo que hago, y por eso, compartir esto contigo lo hace aún más especial.</p>
+        <p>Tal vez no alcances a ver todo lo que hay detrás de estas palabras, fotos y efectos, pero por eso me apasiona tanto la programación, y quería compartir contigo este momento que significa tanto para mí. Es una gran lección de vida, porque muchas veces no se percibe el esfuerzo que hay detrás de cada logro, y aún así, tú siempre has sido capaz de ver en mí lo que pocos ven. Aprecio profundamente cómo reconoces todo lo que hago, y por eso, compartir esto contigo lo hace aún más especial.</p>
         <p>Estas flores no son solo un gesto, sino una manifestación de lo que construyo por y para ti. Cada pétalo digital está cargado de mis pensamientos, cada hoja virtual lleva mis suspiros, y el color vibrante de estas flores simboliza el brillo que traes a mi vida.</p>
         <p>He programado este momento con la misma precisión y cuidado con que pienso en ti, para que las flores amarillas lleguen a ti de una manera única, creada por mis propias manos, desde el lenguaje que mejor me expresa: la tecnología. Porque a veces, el amor no solo se da en gestos, sino también en las pequeñas creaciones que nacen desde el corazón.</p>
-        <p>Hoy, te entrego estas flores a través de un clic, pero lo que realmente deseo es que recibas con ellas todo lo que mi alma quiere compartir contigo.
-           Pero antes de eso aun quiero darte unas palabras extra que escribi desde lo mas profundo de mi alma, busca en cada imagen mi amor.</p>
+        <p>Hoy, te entrego estas flores a través de un clic, pero lo que realmente deseo es que recibas con ellas todo lo que mi alma quiere compartir contigo. Pero antes de eso aun quiero darte unas palabras extra que escribí desde lo más profundo de mi alma, busca en cada imagen mi amor.</p>
     </div>
 
     <!-- Álbum de fotos con efecto flip -->
@@ -209,7 +215,7 @@
                     <img src="img/foto1.jpg" alt="Foto 1">
                 </div>
                 <div class="flip-card-back">
-                    <p>Cada vez que miro tus ojos, siento que el mundo a mi alrededor se detiene, como si el tiempo se congelara en ese instante perfecto donde solo existimos tú y yo, compartiendo un vínculo tan profundo que no necesita palabras para ser comprendido.</p>
+                    <p>Cada vez que miro tus ojos, siento que el mundo a mi alrededor se detiene...</p>
                 </div>
             </div>
         </div>
@@ -219,7 +225,7 @@
                     <img src="img/foto2.jpg" alt="Foto 2">
                 </div>
                 <div class="flip-card-back">
-                    <p>Cuando pienso en todo lo que hemos compartido, desde risas interminables hasta momentos de complicidad, me doy cuenta de que cada experiencia a tu lado ha sido un capítulo emocionante en nuestra historia, y no puedo esperar a escribir juntos el próximo</p>
+                    <p>Cuando pienso en todo lo que hemos compartido, desde risas interminables...</p>
                 </div>
             </div>
         </div>
@@ -229,7 +235,7 @@
                     <img src="img/foto3.jpg" alt="Foto 3">
                 </div>
                 <div class="flip-card-back">
-                    <p>Cuando estoy contigo, siento que el tiempo se vuelve maleable, como si pudiera estirarlo y hacerlo eterno, para que cada segundo a tu lado se convierta en una eternidad de momentos que nunca quiero dejar de vivir.</p>
+                    <p>Cuando estoy contigo, siento que el tiempo se vuelve maleable...</p>
                 </div>
             </div>
         </div>
@@ -239,7 +245,7 @@
                     <img src="img/foto4.jpg" alt="Foto 4">
                 </div>
                 <div class="flip-card-back">
-                    <p>Hay un millón de universos posibles, pero en cada uno de ellos, sin importar el destino o las circunstancias, estoy seguro de que siempre te buscaría, siempre te encontraría, porque eres el epicentro de todo lo que soy, la razón por la que cada latido de mi corazón tiene sentido.</p>
+                    <p>Hay un millón de universos posibles, pero en cada uno de ellos, sin importar...</p>
                 </div>
             </div>
         </div>
@@ -249,18 +255,17 @@
                     <img src="img/foto5.jpg" alt="Foto 5">
                 </div>
                 <div class="flip-card-back">
-                    <p>Tú eres el verso que nunca supe escribir, esa poesía escondida entre los pliegues de la vida, que al encontrarte se desplegó en mi alma con la delicadeza de un pétalo, revelando un amor tan puro que mis palabras nunca alcanzarán a describirlo por completo.</p>
+                    <p>Tú eres el verso que nunca supe escribir, esa poesía escondida...</p>
                 </div>
             </div>
         </div>
-        <!-- Nueva foto añadida -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <img src="img/foto6.jpg" alt="Foto 6">
                 </div>
                 <div class="flip-card-back">
-                    <p>Me encanta cómo, sin importar lo caótico que sea el mundo afuera, cuando estoy contigo todo parece más claro, más sencillo, como si tu presencia fuera el equilibrio perfecto que necesito para sentirme en paz.</p>
+                    <p>Me encanta cómo, sin importar lo caótico que sea el mundo afuera...</p>
                 </div>
             </div>
         </div>
